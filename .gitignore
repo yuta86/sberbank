@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+### PyCharm ###
+.idea/
+
+### Database ###
+*.sqlite3
+
+### Environment ###
+my_env/

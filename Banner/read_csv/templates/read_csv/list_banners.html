@@ -1,0 +1,37 @@
+{% extends "read_csv/base.html" %}
+{% load staticfiles %}
+{% block title %}
+Список баннеров
+{% endblock %}
+
+{% block content %}
+<div id="sidebar">
+    <h3>Баннеры</h3>
+
+
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr class="bg-red text-white">
+            <th>ID</th>
+            <th>URL</th>
+            <th>Кол-во показов</th>
+            <th>Дата обновления</th>
+            <th>Дата создания</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for banner in banners %}
+        <tr>
+            <td scope="row">{{ banner.id }}</td>
+            <td>{{ banner.url }}</td>
+            <td>{{ banner.shows }}</td>
+            <td>{{ banner.updated }}</td>
+            <td>{{ banner.created }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}
